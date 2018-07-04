@@ -13,6 +13,9 @@
             <li class="nav-item">
               <nuxt-link class="nav-link" to="/">Home </nuxt-link>
             </li>
+             <li class="nav-item">
+              <nuxt-link class="nav-link" to="about">About </nuxt-link>
+            </li>
             <li class="nav-item">
               <nuxt-link class="nav-link" :class="{disabled:!isAuthenticated}" to="settings">Settings </nuxt-link>
             </li>
@@ -36,6 +39,7 @@
   import {mapActions, mapGetters} from 'vuex'
   import Logo from '~/components/common/Logo'
   export default {
+    name: 'header-component',
     computed: {
       ...mapGetters({name: 'getDisplayName', isAuthenticated: 'isAuthenticated'})
     },

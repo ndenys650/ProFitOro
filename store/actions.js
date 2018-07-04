@@ -1,4 +1,4 @@
-import firebaseApp from '~/firebase'
+import firebaseApp from '~/firebaseapp'
 import { firebaseAction } from 'vuexfire'
 import uuidv1 from 'uuid/v1'
 
@@ -22,8 +22,9 @@ export default {
    * @param files
    * @returns {Promise}
    */
+  _uploadImage,
   uploadImages ({state}, files) {
-    return Promise.all(files.map(_uploadImage))
+    return Promise.all(files.map(this._uploadImage))
   },
   /**
    * Creates new workout

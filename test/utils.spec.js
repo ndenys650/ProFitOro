@@ -12,6 +12,9 @@ describe('utils', () => {
 })
 
 describe('numberOfSecondsFromNow', () => {
+  it('should return 0 if no parameter is passed', () => {
+    expect(numberOfSecondsFromNow()).toEqual(0)
+  })
   it('should return the exact number of seconds from now', () => {
     Date.now = jest.fn(() => 2000)
     expect(numberOfSecondsFromNow(1000)).toEqual(1)
@@ -19,8 +22,14 @@ describe('numberOfSecondsFromNow', () => {
 })
 
 describe('beep', () => {
-  it('should call the Audio.play function', ()
-  => {
-    
+  it('should call the Audio.play function', () => { 
+    let mockAudioPlay = jest.fn()
+
+    Audio.prototype.play = mockAudioPlay
+
+    beep()
+    expect(mockAudioPlay.mock.calls.length).toEqual(1)
+    expect(mockAudioPlay).toHaveBeenCalled()
+    mockAudioPlay.mockReset()
   })
 })

@@ -3,7 +3,7 @@
     <header-component></header-component>
     <div class="container min-full-height clearfix">
       <div class="main-content row">
-        <div class="section-left col-sm-12 col-md-6 col-lg-6 float-left">
+        <div class="section-left col-sm-12 col-md-6 col-lg-6 float-left pb-4">
           <workouts-component></workouts-component>
         </div>
         <div class="section-right col-sm-12 col-md-6 col-lg-6 float-right">

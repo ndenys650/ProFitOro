@@ -1,5 +1,5 @@
 <template>
-  <div class="footer">
+  <div class="footer navbar fixed-bottom navbar-light bg-light">
     <div class="container">
       <span class="copyright">Copyright</span>
       <span class="fact">Working out sharpens your memory</span>
@@ -17,6 +17,7 @@
     border-top: 3px dotted $color-primary;
     min-height: $footer-height;
     padding: 15px 10px;
+    background-color: white;
     .container {
       @extend .center-content;
       @include justify-content(space-between);

@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <header-component></header-component>
-    <div class="row justify-content-center">
+    <div class="row justify-content-center pb-4">
       <div class="col-sm-12 col-md-6 col-lg-4">
         <account-settings></account-settings>
       </div>
